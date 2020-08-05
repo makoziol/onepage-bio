@@ -5,29 +5,25 @@ const GridExamplePadded = () => (
   <div style={{ fontSize: '1.5em', color: '#7d7d77', background: 'white' }}>
     <p style={{ fontSize: '2em' }}>Contact</p>
 
-    <Grid columns={2} padded style={{ lineHeight: '1.5em' }}>
-      <Grid.Column>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
-      </Grid.Column>
-      <Grid.Column>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English. Many desktop publishing packages and web
-        page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web sites still in their
-        infancy. Various versions have evolved over the years, sometimes by
-        accident, sometimes on purpose (injected humour and the like).
-      </Grid.Column>
+    <Grid columns={1} padded style={{ lineHeight: '1.5em' }}>
+      <form method="post">
+        <input
+          style={{ width: '100%' }}
+          type="hidden"
+          name="form-name"
+          value="contact"
+        />
+
+        <input type="text" name="name" placeholder="Name" />
+
+        <input type="email" name="email" placeholder="Email" />
+
+        <textarea name="message" placeholder="Message" />
+
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
     </Grid>
   </div>
 );
