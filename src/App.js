@@ -1,13 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Menu from './components/Menu';
+import AboutMe from './components/AboutMe';
+import Image from './components/Image';
+import Interests from './components/Interests';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <Menu />
+      <Image />
+      <AboutMe />
+      <Interests />
+      <Contact />
     </div>
   );
 }
