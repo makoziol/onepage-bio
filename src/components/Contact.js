@@ -13,19 +13,21 @@ const GridExamplePadded = () => (
   >
     <p style={{ fontSize: '2em' }}>Contact me</p>
 
-    <div style={{ textAlign: 'center', width: '100%', padding: '30px' }}>
-      <form method="post">
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="text" name="name" placeholder="Name" />
-        <input type="email" name="email" placeholder="Email" />
-        <textarea name="message" placeholder="Message" />
-        <p>
-          <button style={{ margin: '20px' }} type="submit">
-            Send
-          </button>
-        </p>
-      </form>
-    </div>
+    <Grid padded>
+      <div style={{ textAlign: 'center', width: '100%', padding: '30px' }}>
+        <form method="post">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <textarea name="message" placeholder="Message" />
+          <p>
+            <button style={{ margin: '20px' }} type="submit">
+              Send
+            </button>
+          </p>
+        </form>
+      </div>
+    </Grid>
   </div>
 );
 
