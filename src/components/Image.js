@@ -8,7 +8,7 @@ const ImageExampleCircular = () => (
       size="medium"
       circular
       centered
-      style={{ marginBottom: '20px' }}
+      style={{ marginBottom: '10px' }}
     />
     <p
       style={{
@@ -27,7 +27,8 @@ const ImageExampleCircular = () => (
       style={{
         color: 'white ',
         fontSize: '2em',
-        marginBottom: '20px'
+        marginTop: '30px',
+        marginBottom: '40px'
       }}
     >
       Software Engineer , Leeds , United Kingdom

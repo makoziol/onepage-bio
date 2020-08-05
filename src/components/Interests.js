@@ -1,32 +1,53 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid, Image, List } from 'semantic-ui-react';
+import './Interests.css';
 
 const GridExamplePadded = () => (
-  <div style={{ fontSize: '1.5em', color: 'white', background: '#7d7d77' }}>
+  <div
+    style={{
+      fontSize: '1.5em',
+      color: 'white',
+      background: '#7d7d77',
+      padding: '50px'
+    }}
+  >
     <p style={{ fontSize: '2em' }}>Interests</p>
 
     <Grid columns={2} padded style={{ lineHeight: '1.5em' }}>
       <Grid.Column>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
+        <strong>PERSONAL INTERESTS:</strong>
+        <br></br>
+        <List style={{ textAlign: 'left' }} as="ul">
+          <List.Item as="li" value="*">
+            <strong>Miniatures.</strong>
+            <br></br> I've been an enthusiastic hobbiest kit modelling Ships and
+            Motorcycles since I was a teenager - but only as an adult am I able
+            to afford the higher-quality kits. I like to modify existing kits to
+            improve functionality.
+          </List.Item>
+          <List.Item as="li" value="*">
+            <strong> Mountaineering. </strong>
+            <br></br>
+            Me and my family have a yearly summit and climb Sniezka (One of the
+            Europe's largest picks)
+          </List.Item>
+          <List.Item as="li" value="*">
+            <strong>Bouldering.</strong> <br></br>I like problem solving aspect
+            of bouldering.
+          </List.Item>
+        </List>
       </Grid.Column>
       <Grid.Column>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English. Many desktop publishing packages and web
-        page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web sites still in their
-        infancy. Various versions have evolved over the years, sometimes by
-        accident, sometimes on purpose (injected humour and the like).
+        <strong>CURRENT PROJECTS:</strong>
+        <br></br>
+        <List style={{ textAlign: 'left' }} as="ul">
+          <List.Item as="li">
+            Smart mirrow using Raspberry PI and React.
+          </List.Item>
+          <List.Item as="li">
+            MyFace. Personal facebook. React,Typescript with GraphQl backend
+          </List.Item>
+        </List>
       </Grid.Column>
     </Grid>
   </div>

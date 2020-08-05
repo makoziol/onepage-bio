@@ -1,33 +1,51 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid, Image, List } from 'semantic-ui-react';
 import Menu from '../components/Menu';
 
 const GridExamplePadded = () => (
-  <div style={{ fontSize: '1.5em', color: '#282c34', background: 'white' }}>
+  <div
+    style={{
+      fontSize: '1.5em',
+      color: '#282c34',
+      background: 'white',
+      padding: '50px'
+    }}
+  >
     <p style={{ fontSize: '2em' }}>About Me</p>
 
     <Grid columns={2} padded style={{ lineHeight: '1.5em' }}>
-      <Grid.Column>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum
+      <Grid.Column style={{ textAlign: 'left' }}>
+        <p>
+          I have over 2 years of experience as a software engineer, and have
+          worked at small startups.
+        </p>
+        <p>
+          While I'm a proficient full-stack developer, my expertise is in
+          building front-end in React.
+        </p>
+        <p>
+          I'm most attracted to solving real customer problems with a business
+          justification.
+        </p>
+        <p>
+          I'm looking to join medium or large organisation to gain more
+          versatile expierience and work on larger number of projects.
+        </p>
       </Grid.Column>
       <Grid.Column>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English. Many desktop publishing packages and web
-        page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web sites still in their
-        infancy. Various versions have evolved over the years, sometimes by
-        accident, sometimes on purpose (injected humour and the like).
+        <strong>HIGHLIGHTS:</strong>
+        <br></br>
+        <List style={{ textAlign: 'left' }} as="ul">
+          <List.Item as="li" value="*">
+            <strong>Ecape Room Raspberry PI project.</strong>
+            <br></br>
+            <h3>
+              Suffisticated lighting and sound controls as well as pre programed
+              sequences. Technologies used: Python (Backend), React.js (Front
+              End), Yeelight
+            </h3>
+          </List.Item>
+        </List>
       </Grid.Column>
     </Grid>
   </div>
