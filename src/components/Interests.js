@@ -9,7 +9,6 @@ const GridExamplePadded = () => {
   useEffect(() => {
     setRef(interestsRef);
   }, []);
-  console.log({ intrestsStateRef });
   return (
     <div
       ref={interestsRef}
