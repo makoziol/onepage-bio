@@ -28,21 +28,23 @@ const GridExamplePadded = () => (
           justification.
         </p>
         <p>
-          I'm looking to join medium or large organisation to gain more
-          versatile expierience and work on larger number of projects.
+          I'm looking to join a medium or large organisation to work on a larger
+          number of projects.
         </p>
       </Grid.Column>
       <Grid.Column>
-        <strong>HIGHLIGHTS:</strong>
+        <strong>HIGHLIGHT:</strong>
         <br></br>
         <List style={{ textAlign: 'left' }} as="ul">
           <List.Item as="li" value="*">
-            <strong>Ecape Room Raspberry PI project.</strong>
+            <strong>Escape Room Raspberry PI project.</strong>
             <br></br>
             <h3>
               Suffisticated lighting and sound controls as well as pre programed
-              sequences. Technologies used: Python (Backend), React.js (Front
-              End), Yeelight
+              sequences.
+              <br></br>
+              Technologies used: Python (Backend), React.js (Front End),
+              Yeelight
             </h3>
           </List.Item>
         </List>
