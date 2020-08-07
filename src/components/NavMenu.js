@@ -29,7 +29,6 @@ const NavMenu = () => {
         fixed="top"
         tabular
         inverted
-        pointing
         style={{ height: '77px', background: '#282c34', zIndex: '1000' }}
         secondary
       >
