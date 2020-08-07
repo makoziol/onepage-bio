@@ -16,7 +16,8 @@ const Contact = () => {
         fontSize: '1.5em',
         color: '#7d7d77',
         background: 'white',
-        padding: '50px'
+        padding: '50px',
+        minHeight: '800px'
       }}
     >
       <p style={{ fontSize: '2em' }}>Contact me</p>
