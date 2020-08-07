@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Input, Menu, Sticky } from 'semantic-ui-react';
+import React, { useEffect } from 'react';
+import { Menu, Sticky } from 'semantic-ui-react';
 import logo from '../logo.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setActiveTab } from '../actions';
@@ -7,6 +7,22 @@ import { setActiveTab } from '../actions';
 function MenuExampleSecondary() {
   const activeItem = useSelector(state => state.setActiveTab);
   const dispatch = useDispatch();
+  const interests = useSelector(state => state.setInterestsRef);
+  const interestsOffsetTop = interests.current.offsetTop;
+  const aboutMeOffsetTop = useSelector(
+    state => state.setAboutMeRef.current.offsetTop
+  );
+
+  const contactOffsetTop = useSelector(
+    state => state.setContactRef.current.offsetTop
+  );
+  const scrollTo = offset =>
+    window.scrollTo({ top: offset, left: 0, behavior: 'smooth' });
+  useEffect(() => {
+    window.onbeforeunload = () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
   return (
     <Sticky>
       <Menu
@@ -25,7 +41,7 @@ function MenuExampleSecondary() {
             }}
             name="Marta Koziol"
             active={activeItem === 'Marta Koziol'}
-            onClick={e => dispatch(setActiveTab('Marta Koziol'))}
+            onClick={e => dispatch(setActiveTab('Marta Koziol')) && scrollTo(0)}
           />
           <Menu.Item>
             <header className="App-header">
@@ -39,19 +55,28 @@ function MenuExampleSecondary() {
             style={{ fontSize: '30px' }}
             name="About Me"
             active={activeItem === 'About Me'}
-            onClick={() => dispatch(setActiveTab('About Me'))}
+            onClick={() =>
+              dispatch(setActiveTab('About Me')) &&
+              scrollTo(aboutMeOffsetTop - 77)
+            }
           />
           <Menu.Item
             style={{ fontSize: '30px' }}
             name="Interests"
             active={activeItem === 'Interests'}
-            onClick={() => dispatch(setActiveTab('Interests'))}
+            onClick={() =>
+              dispatch(setActiveTab('Interests')) &&
+              scrollTo(interestsOffsetTop - 77)
+            }
           />
           <Menu.Item
             style={{ fontSize: '30px' }}
             name="Contact"
             active={activeItem === 'Contact'}
-            onClick={() => dispatch(setActiveTab('Contact'))}
+            onClick={() =>
+              dispatch(setActiveTab('Contact')) &&
+              scrollTo(contactOffsetTop - 77)
+            }
           />
         </Menu.Menu>
       </Menu>

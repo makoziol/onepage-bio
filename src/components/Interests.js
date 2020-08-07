@@ -1,13 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Grid, Image, List } from 'semantic-ui-react';
+import { Grid, List } from 'semantic-ui-react';
+import { useDispatch } from 'react-redux';
+import { setInterestsRef } from '../actions';
 import './Interests.css';
 
 const GridExamplePadded = () => {
-  const interestsRef = useRef(null);
-  const [intrestsStateRef, setRef] = useState({});
-
+  const interestsRef = useRef(0);
+  const dispatch = useDispatch();
   useEffect(() => {
-    setRef(interestsRef);
+    dispatch(setInterestsRef(interestsRef));
   }, []);
   return (
     <div
