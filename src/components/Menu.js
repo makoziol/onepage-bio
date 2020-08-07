@@ -16,7 +16,7 @@ function MenuExampleSecondary() {
   const contactOffsetTop = useSelector(
     state => state.setContactRef.current.offsetTop
   );
-  const scrollTo = offset =>
+  const scrollToPosition = offset =>
     window.scrollTo({ top: offset, left: 0, behavior: 'smooth' });
   useEffect(() => {
     window.onbeforeunload = () => {
@@ -41,7 +41,9 @@ function MenuExampleSecondary() {
             }}
             name="Marta Koziol"
             active={activeItem === 'Marta Koziol'}
-            onClick={e => dispatch(setActiveTab('Marta Koziol')) && scrollTo(0)}
+            onClick={e =>
+              dispatch(setActiveTab('Marta Koziol')) && scrollToPosition(0)
+            }
           />
           <Menu.Item>
             <header className="App-header">
@@ -57,7 +59,7 @@ function MenuExampleSecondary() {
             active={activeItem === 'About Me'}
             onClick={() =>
               dispatch(setActiveTab('About Me')) &&
-              scrollTo(aboutMeOffsetTop - 77)
+              scrollToPosition(aboutMeOffsetTop - 77)
             }
           />
           <Menu.Item
@@ -66,7 +68,7 @@ function MenuExampleSecondary() {
             active={activeItem === 'Interests'}
             onClick={() =>
               dispatch(setActiveTab('Interests')) &&
-              scrollTo(interestsOffsetTop - 77)
+              scrollToPosition(interestsOffsetTop - 77)
             }
           />
           <Menu.Item
@@ -75,7 +77,7 @@ function MenuExampleSecondary() {
             active={activeItem === 'Contact'}
             onClick={() =>
               dispatch(setActiveTab('Contact')) &&
-              scrollTo(contactOffsetTop - 77)
+              scrollToPosition(contactOffsetTop - 77)
             }
           />
         </Menu.Menu>
