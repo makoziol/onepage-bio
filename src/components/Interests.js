@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setInterestsRef } from '../actions';
 import './Interests.css';
 
-const GridExamplePadded = () => {
+const Interests = () => {
   const interestsRef = useRef(0);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -68,4 +68,4 @@ const GridExamplePadded = () => {
     </div>
   );
 };
-export default GridExamplePadded;
+export default Interests;

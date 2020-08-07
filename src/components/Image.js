@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Divider } from 'semantic-ui-react';
 
-const ImageExampleCircular = () => (
+const Image = () => (
   <div style={{ paddingTop: '100px' }}>
     <Image
       src={require('../images/photo.jpeg')}
@@ -36,4 +36,4 @@ const ImageExampleCircular = () => (
   </div>
 );
 
-export default ImageExampleCircular;
+export default Image;

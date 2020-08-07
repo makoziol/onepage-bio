@@ -3,7 +3,7 @@ import { Grid, List } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { setAboutMeRef } from '../actions';
 
-const GridExamplePadded = () => {
+const AboutMe = () => {
   const aboutMeRef = useRef(0);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -61,4 +61,4 @@ const GridExamplePadded = () => {
     </div>
   );
 };
-export default GridExamplePadded;
+export default AboutMe;

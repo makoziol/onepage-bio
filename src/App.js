@@ -1,21 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
-import Menu from './components/Menu';
 import AboutMe from './components/AboutMe';
 import Image from './components/Image';
 import Interests from './components/Interests';
 import Contact from './components/Contact';
+import NavMenu from './components/NavMenu';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Menu />
+      <NavMenu />
       <Image />
       <AboutMe />
       <Interests />
       <Contact />
     </div>
   );
-}
+};
 
 export default App;

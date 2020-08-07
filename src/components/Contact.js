@@ -1,10 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { Grid, Image, Form, Button } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { setContactRef } from '../actions';
 import './Contact.css';
 
-const GridExamplePadded = () => {
+const Contact = () => {
   const contactRef = useRef(0);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -39,4 +38,4 @@ const GridExamplePadded = () => {
   );
 };
 
-export default GridExamplePadded;
+export default Contact;

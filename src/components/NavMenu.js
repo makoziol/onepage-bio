@@ -4,7 +4,7 @@ import logo from '../logo.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setActiveTab } from '../actions';
 
-function MenuExampleSecondary() {
+const NavMenu = () => {
   const activeItem = useSelector(state => state.setActiveTab);
   const dispatch = useDispatch();
   const interests = useSelector(state => state.setInterestsRef);
@@ -84,5 +84,5 @@ function MenuExampleSecondary() {
       </Menu>
     </Sticky>
   );
-}
-export default MenuExampleSecondary;
+};
+export default NavMenu;
