@@ -1,6 +1,7 @@
+import React from 'react';
 import './App.css';
 import AboutMe from './components/AboutMe';
-import Image from './components/Image';
+import Info from './components/Info';
 import Interests from './components/Interests';
 import Contact from './components/Contact';
 import NavMenu from './components/NavMenu';
@@ -9,7 +10,7 @@ const App = () => {
   return (
     <div className="App">
       <NavMenu />
-      <Image />
+      <Info />
       <AboutMe />
       <Interests />
       <Contact />

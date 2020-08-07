@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Divider } from 'semantic-ui-react';
 
-const Image = () => (
+const Info = () => (
   <div style={{ paddingTop: '100px' }}>
     <Image
       src={require('../images/photo.jpeg')}
@@ -36,4 +36,4 @@ const Image = () => (
   </div>
 );
 
-export default Image;
+export default Info;
