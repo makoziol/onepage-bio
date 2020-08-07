@@ -8,7 +8,7 @@ const Contact = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setContactRef(contactRef));
-  }, []);
+  }, [dispatch]);
   return (
     <div
       ref={contactRef}

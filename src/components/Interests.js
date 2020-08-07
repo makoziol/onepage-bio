@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Grid, List } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { setInterestsRef } from '../actions';
@@ -10,7 +10,7 @@ const Interests = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setInterestsRef(interestsRef));
-  }, []);
+  }, [dispatch]);
   return (
     <div
       ref={interestsRef}
@@ -31,7 +31,7 @@ const Interests = () => {
           <List style={{ textAlign: 'left' }} as="ul">
             {interests &&
               interests.map((interest, key) => (
-                <List.Item as="li" value="*">
+                <List.Item key={key} as="li" value="*">
                   <strong>{interest.TITLE}</strong>
                   <br></br>
                   {interest.DESCRIPTION}

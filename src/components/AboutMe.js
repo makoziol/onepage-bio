@@ -10,7 +10,7 @@ const AboutMe = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setAboutMeRef(aboutMeRef));
-  }, []);
+  }, [dispatch]);
   return (
     <div
       ref={aboutMeRef}
