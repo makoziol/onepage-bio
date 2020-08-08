@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Menu, Sticky } from 'semantic-ui-react';
-import logo from '../logo.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setActiveTab } from '../actions';
 import DropDown from './NavBarDropDown';
@@ -45,11 +44,6 @@ const NavMenu = ({ width }) => {
               dispatch(setActiveTab('Marta Koziol')) && scrollToPosition(0)
             }
           />
-          <Menu.Item>
-            <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-            </header>
-          </Menu.Item>
         </Menu.Menu>
         {width > 900 ? (
           <Menu.Menu position="right">
