@@ -5,7 +5,7 @@ const Info = () => (
   <div style={{ paddingTop: '100px' }}>
     <Image
       src={require('../images/photo.jpeg')}
-      size="medium"
+      size="small"
       circular
       centered
       style={{ marginBottom: '10px', border: '4px solid white' }}
