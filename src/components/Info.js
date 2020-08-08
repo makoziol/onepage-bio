@@ -8,7 +8,7 @@ const Info = () => (
       size="medium"
       circular
       centered
-      style={{ marginBottom: '10px' }}
+      style={{ marginBottom: '10px', border: '4px solid white' }}
     />
     <p
       style={{
