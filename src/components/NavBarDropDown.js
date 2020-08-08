@@ -42,7 +42,7 @@ const DropdownExampleClearable = () => {
       selectOnBlur={false}
       value=""
       style={{
-        width: '100%',
+        width: '50%',
         textAlign: 'right',
         color: 'white',
         fontSize: '20px',
