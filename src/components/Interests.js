@@ -5,7 +5,7 @@ import { setInterestsRef } from '../actions';
 import { interests, projects } from '../data/data';
 import './Interests.css';
 
-const Interests = () => {
+const Interests = ({ width }) => {
   const interestsRef = useRef(0);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,16 +18,19 @@ const Interests = () => {
         fontSize: '1.5em',
         color: 'white',
         background: '#7d7d77',
-        padding: '50px'
+        padding: `${width > 900 ? '50px' : '10px'}`
       }}
     >
       <p style={{ fontSize: '2em' }}>Interests</p>
 
-      <Grid columns={2} padded style={{ lineHeight: '1.5em' }}>
+      <Grid
+        columns={width > 900 ? 2 : 1}
+        padded
+        style={{ lineHeight: '1.5em' }}
+      >
         <Grid.Column>
           <strong>PERSONAL INTERESTS:</strong>
           <br></br>
-
           <List style={{ textAlign: 'left' }} as="ul">
             {interests &&
               interests.map((interest, key) => (

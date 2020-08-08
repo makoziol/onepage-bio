@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import { Grid, List } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { setAboutMeRef } from '../actions';
 import { ABOUT_ME_OVERVIEW, hilight } from '../data/data';
 
-const AboutMe = () => {
+const AboutMe = ({ width }) => {
   const { DESCRIPTION, TITLE, TECHNOLOGIES } = hilight;
   const aboutMeRef = useRef(0);
   const dispatch = useDispatch();
@@ -18,12 +18,16 @@ const AboutMe = () => {
         fontSize: '1.5em',
         color: '#282c34',
         background: 'white',
-        padding: '50px'
+        padding: `${width > 900 ? '50px' : '10px'}`
       }}
     >
       <p style={{ fontSize: '2em' }}>About Me</p>
 
-      <Grid columns={2} padded style={{ lineHeight: '1.5em' }}>
+      <Grid
+        columns={width > 900 ? 2 : 1}
+        padded
+        style={{ lineHeight: '1.5em' }}
+      >
         <Grid.Column style={{ textAlign: 'left' }}>
           {ABOUT_ME_OVERVIEW &&
             ABOUT_ME_OVERVIEW.map((item, key) => <p key={key}>{item}</p>)}
@@ -31,14 +35,14 @@ const AboutMe = () => {
         <Grid.Column>
           <strong>HIGHLIGHT:</strong>
           <br></br>
-          <List style={{ textAlign: 'left' }} as="ul">
-            <List.Item as="li" value="*">
-              <strong>{TITLE}</strong>
-              <br></br>
-              <h3>{DESCRIPTION}</h3>
-              <h4>{TECHNOLOGIES}</h4>
-            </List.Item>
-          </List>
+          <br></br>
+          <p style={{ textAlign: 'left' }}>
+            <strong>{TITLE}</strong>
+            <br></br>
+            {DESCRIPTION}
+            <br></br>
+            {TECHNOLOGIES}
+          </p>
         </Grid.Column>
       </Grid>
     </div>

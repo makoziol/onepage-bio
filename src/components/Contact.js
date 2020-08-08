@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setContactRef } from '../actions';
 import './Contact.css';
 
-const Contact = () => {
+const Contact = ({ width }) => {
   const contactRef = useRef(0);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -16,7 +16,7 @@ const Contact = () => {
         fontSize: '1.5em',
         color: '#7d7d77',
         background: 'white',
-        padding: '50px',
+        padding: `${width > 900 ? '50px' : '10px'}`,
         minHeight: '800px'
       }}
     >

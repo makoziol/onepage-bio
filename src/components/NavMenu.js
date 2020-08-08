@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Menu, Sticky } from 'semantic-ui-react';
 import logo from '../logo.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setActiveTab } from '../actions';
 import DropDown from './NavBarDropDown';
-import _ from 'lodash';
 
-const NavMenu = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = _.debounce(() => setWidth(window.innerWidth), 100);
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+const NavMenu = ({ width }) => {
   const activeItem = useSelector(state => state.setActiveTab);
   const dispatch = useDispatch();
   const interests = useSelector(state => state.setInterestsRef);
