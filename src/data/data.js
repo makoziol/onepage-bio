@@ -18,13 +18,13 @@ export const interests = [
   {
     TITLE: `Miniatures.`,
     DESCRIPTION: `I've been an enthusiastic hobbiest of miniature
-  modellels since I was a teenager - but only as an adult I am able
+  models since I was a teenager - but only as an adult I am able
   to afford the higher-quality kits. I like to modify existing kits
   to improve functionality.`
   },
   {
     TITLE: 'Mountaineering.',
-    DESCRIPTION: ` Me and my family have a yearly summit and climb Sniezka (One of
+    DESCRIPTION: `Me and my family have a yearly summit and climb Sniezka (One of
   Poland's largest peaks)`
   },
   {
@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     TITLE: 'FUTURE PROJECTS',
-    DETAILS: `   Smart mirrow using Raspberry PI and React. I have seen few
+    DETAILS: `Smart mirrow using Raspberry PI and React. I have seen few
       projects been done in python but am interested to try to code it
       in React.`
   }
