@@ -3,9 +3,7 @@ export const ABOUT_ME_OVERVIEW = [
   `While I'm a proficient full-stack developer, my expertise is in
   building front-end in React.`,
   `I'm most attracted to solving real customer problems with a business
-  justification.`,
-  `I'm looking to join a medium or large organisation to work on a
-  larger number of projects.`
+  justification.`
 ];
 
 export const hilight = {
