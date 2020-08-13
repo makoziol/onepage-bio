@@ -1,6 +1,10 @@
 .App {
   text-align: center;
   background-color: #282c34;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 'center';
 }
 
 .App-logo {
