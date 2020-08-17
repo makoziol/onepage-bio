@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Grid, List } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { setInterestsRef } from '../actions';
 import { interests, projects } from '../data/data';
@@ -18,39 +18,64 @@ const Interests = ({ width }) => {
         fontSize: '1.5em',
         color: 'white',
         background: '#7d7d77',
-        padding: `${width > 900 ? '50px' : '10px'}`
+        padding: `${width > 900 ? '50px' : '10px'}`,
+        lineHeight: '1.4em'
       }}
     >
       <p style={{ fontSize: '2em' }}>Interests</p>
 
-      <Grid
-        columns={width > 900 ? 2 : 1}
-        padded
-        style={{ lineHeight: '1.5em' }}
-      >
+      <Grid columns={width > 900 ? 2 : 1} padded>
         <Grid.Column>
           <strong>PERSONAL INTERESTS:</strong>
           <br></br>
-          <List style={{ textAlign: 'left' }} as="ul">
+          <br></br>
+          <div style={{ textAlign: 'left', lineHeight: '1.4em' }} as="ul">
             {interests &&
               interests.map((interest, key) => (
-                <List.Item key={key} as="li" value="*">
-                  <strong>{interest.TITLE}</strong>
+                <p key={key} as="li" value="*">
+                  <strong style={{ color: '#282d34', fontWeight: 'bold' }}>
+                    {interest.TITLE}
+                  </strong>
                   <br></br>
                   {interest.DESCRIPTION}
-                </List.Item>
+                </p>
               ))}
-          </List>
+          </div>
         </Grid.Column>
         <Grid.Column>
           {projects &&
             projects.map((project, key) => (
               <div key={key}>
-                <strong>{project.TITLE}:</strong>
+                <strong>{project.SECTION_TITLE}:</strong>
                 <br></br>
-                <List style={{ textAlign: 'left' }} as="ul">
-                  <List.Item as="li">{project.DETAILS}</List.Item>
-                </List>
+                <br></br>
+                <div style={{ textAlign: 'left' }} as="ul">
+                  <strong
+                    style={{
+                      color: '#282d34',
+                      fontWeight: '600',
+                      textAlign: 'left'
+                    }}
+                  >
+                    {project.TITLE}
+                  </strong>
+
+                  <p style={{ marginBottom: '0' }} as="li">
+                    {project.DETAILS}
+                  </p>
+                  <a
+                    style={{
+                      color: '#aaaace',
+                      textDecoration: 'none',
+                      textAlign: 'center'
+                    }}
+                    href="https://martakoziol-interests.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.LINK_TEXT}
+                  </a>
+                </div>
                 <br></br>
               </div>
             ))}

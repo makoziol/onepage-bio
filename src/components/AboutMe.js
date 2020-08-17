@@ -2,10 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import { Grid } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { setAboutMeRef } from '../actions';
-import { ABOUT_ME_OVERVIEW, hilight } from '../data/data';
+import { ABOUT_ME_OVERVIEW, hilights } from '../data/data';
 
 const AboutMe = ({ width }) => {
-  const { DESCRIPTION, TITLE, TECHNOLOGIES } = hilight;
   const aboutMeRef = useRef(0);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -33,16 +32,20 @@ const AboutMe = ({ width }) => {
             ABOUT_ME_OVERVIEW.map((item, key) => <p key={key}>{item}</p>)}
         </Grid.Column>
         <Grid.Column>
-          <strong>HIGHLIGHT:</strong>
+          <strong>HIGHLIGHTS:</strong>
           <br></br>
           <br></br>
-          <p style={{ textAlign: 'left' }}>
-            <strong>{TITLE}</strong>
-            <br></br>
-            {DESCRIPTION}
-            <br></br>
-            {TECHNOLOGIES}
-          </p>
+          {hilights.map((hilight, index) => {
+            return (
+              <p key={index} style={{ textAlign: 'left' }}>
+                <strong>{hilight.TITLE}</strong>
+                <br></br>
+                {hilight.DESCRIPTION}
+                <br></br>
+                {hilight.TECHNOLOGIES}
+              </p>
+            );
+          })}
         </Grid.Column>
       </Grid>
     </div>
